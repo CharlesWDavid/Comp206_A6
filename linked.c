@@ -9,8 +9,6 @@ struct ACCOUNT {
 
 // initializing the list
 struct ACCOUNT *head = NULL;
-head = malloc(sizeof(struct ACCOUNT));
-if(head == NULL) return 1;
 
 void findUpdate(int account, float amount){
 
@@ -28,14 +26,14 @@ void findUpdate(int account, float amount){
     new_acc = malloc(sizeof(struct ACCOUNT));
     new_acc->accountNumber = account;
     new_acc->balance = amount;
-    new_acc->next = *head;
-    *head = new_acc;
+    new_acc->next = head;
+    head = new_acc;
 
 }
 
 void prettyPrint(){
 
-    struct Account *curr = head;
+    struct ACCOUNT *curr = head;
 
     while(curr != NULL){
         printf("ACCOUNT ID: %5d BALANCE: $ %6.2f", curr->accountNumber, curr->balance);
