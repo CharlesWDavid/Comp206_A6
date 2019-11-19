@@ -5,7 +5,7 @@ main.o: main.c
 	gcc -c main.c
 
 ssv.o: ssv.c
-	gcc -c ssv.o
+	gcc -c ssv.c
 
 linked.o: linked.c
 	gcc -c linked.c

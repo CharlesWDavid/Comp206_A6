@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "linked.h"
 
-struct ACCOUNT {
-    int accountNumber;
-    float balance;
-    struct ACCOUNT *next;
-};
+// struct ACCOUNT {
+//     int accountNumber;
+//     float balance;
+//     struct ACCOUNT *next;
+// };
 
 // initializing the list
 struct ACCOUNT *head = NULL;
@@ -19,6 +20,7 @@ void findUpdate(int account, float amount){
         if (curr->accountNumber == account){
             curr->balance += amount;
         }
+        curr = curr->next;
     }
 
     // Add new account at top of list if not found
@@ -36,7 +38,7 @@ void prettyPrint(){
     struct ACCOUNT *curr = head;
 
     while(curr != NULL){
-        printf("ACCOUNT ID: %5d BALANCE: $ %6.2f", curr->accountNumber, curr->balance);
+        printf("ACCOUNT ID: %5d BALANCE: $ %6.2f\n", curr->accountNumber, curr->balance);
         curr = curr->next;
     }
 }
