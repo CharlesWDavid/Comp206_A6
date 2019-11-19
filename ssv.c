@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 void parse(char record[], int *acct, float *amnt){
@@ -7,7 +8,9 @@ void parse(char record[], int *acct, float *amnt){
 
     sscanf(record, "%d %f", account, amount); // writing fields into appropriate string arrays
 
-    acct = atoi(account); // using call-by-reference to return account number 
-    amnt = atof(amount);  // and transaction amount
-    
+    int accNum = atoi(account);
+    float accAmount = atof(amount);
+
+    acct = &accNum;     // using call-by-reference to return account number 
+    amnt = &accAmount;  // and transaction amount
 }
