@@ -9,4 +9,5 @@ void parse(char record[], int *acct, float *amnt){
 
     acct = atoi(account); // using call-by-reference to return account number 
     amnt = atof(amount);  // and transaction amount
+    
 }
