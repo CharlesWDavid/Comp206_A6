@@ -26,6 +26,7 @@ void findUpdate(int account, float amount){
     // Add new account at top of list if not found
     struct ACCOUNT *new_acc;
     new_acc = malloc(sizeof(struct ACCOUNT));
+    new_acc->accountNumber = account;
     new_acc->balance = amount;
     new_acc->next = *head;
     *head = new_acc;
