@@ -42,10 +42,11 @@ void findUpdate(int account, float amount){
 
 void prettyPrint(){
 
-    struct ACCOUNT *curr = head;
+    struct ACCOUNT *curr = head; // iterating over list
 
+    // printing contents of one node
     while(curr != NULL){
         printf("ACCOUNT ID: %5d\tBALANCE: $ %6.2f\n", curr->accountNumber, curr->balance);
-        curr = curr->next;
+        curr = curr->next; // moving to next node
     }
 }
