@@ -2,3 +2,4 @@ bank
 main.o
 linked.o 
 ssv.o
+git.log
