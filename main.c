@@ -16,7 +16,7 @@ int main(){
     
     while(fgets(line, 29, p) != NULL){
         int *acct;
-        float *amnt;
+        float *amnt; // creating pointers to pass them into multiple functions
         parse(line, acct, amnt);
         findUpdate(*acct, *amnt);
     }
