@@ -27,7 +27,7 @@ void findUpdate(int account, float amount){
         // adding new values
         new_acc->accountNumber = account;
         new_acc->balance = amount;
-        // setting next depending on if the list was empty or not
+        // updating next depending on if the list was empty or not
         if (head == NULL){
             new_acc->next = NULL;
         } else {
